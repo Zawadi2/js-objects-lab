@@ -84,12 +84,12 @@ Exercise 6
 
 Solve Exercise 6 here:
 */
-gyms.forEach(gym => {
+game.gyms.forEach(gym => {
     if (gym.difficulty < 3) {
       gym.completed = true;
     }
   });
-console.log(gyms);
+console.log(game.gyms);
 /*
 Exercise 7
 1. Evolve the starter Pokémon you added to your party earlier. Each starter Pokémon evolves into a specific one.
@@ -141,11 +141,12 @@ Exercise 10
   - not return anything
 
 After writing this method, call it and pass in a Pokemon object of your choice from the `pokemon` data to catch it.
-
+ 
 Solve Exercise 10 here:
 */
-game. catchPokemon = function(PokemonObj) {
-    game. party. push(pokemonObj);
+
+game.catchPokemon = function(pokemonObj) {
+    game.party.push(pokemonObj);
 }
 
 game.catchPokemon(pokemon.find(pokemon => pokemon.name === "Pikachu"));
@@ -162,8 +163,8 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 
 Solve Exercise 11 here:
 */
-game.catchPokémon = function(PokémonObj) {
-    game.party.push(PokémonObj);
+game.catchPokemon = function(pokemonObj) {
+    game.party.push(pokemonObj);
     const pokeballIndex = game.items.findIndex(item => item.name === "Pokeball");
     if (pokeballIndex !== -1) {
       game.items[pokeballIndex].quantity--;
@@ -171,7 +172,7 @@ game.catchPokémon = function(PokémonObj) {
   }
 
 
-game.catchPokémon(Pokémon.find(pokemon => pokemon.name === "Charmander"));
+game.catchPokemon(pokemon.find(pokemon => pokemon.name === "Charmander"));
 console.log(game.items);    
 
 
@@ -183,7 +184,7 @@ Exercise 12
 
 Solve Exercise 12 here:
 */
-gyms.forEach(gym => {
+game.gyms.forEach(gym => {
   if (gym.difficulty < 6) {
     gym.completed = true;
   }
@@ -242,7 +243,7 @@ Exercise 15
 
 Solve Exercise 15 here:
 */
-gyms.forEach(gym => {
+game.gyms.forEach(gym => {
     if (gym.difficulty < 8) {
       gym.completed = true;
     }
